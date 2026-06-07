@@ -430,6 +430,14 @@ class FilamentManagerPlugin(FilamentManagerApi,
 
         self._logger.debug("Updated thresholds: {thresholds}".format(thresholds=str(self.pauseThresholds)))
 
+    # Blueprint config
+
+    def is_blueprint_autoescaped(self):
+        return True
+
+    def is_blueprint_csrf_protected(self):
+        return True
+
     # Softwareupdate hook
 
     def get_update_information(self):
@@ -440,19 +448,19 @@ class FilamentManagerPlugin(FilamentManagerApi,
 
                 # version check: github repository
                 type="github_release",
-                user="OllisGit",
+                user="billygr",
                 repo="OctoPrint-FilamentManager",
                 current=self._plugin_version,
 
                 # update method: pip
                 #pip="https://github.com/malnvenshorn/OctoPrint-FilamentManager/archive/{target_version}.zip"
-                pip="https://github.com/OllisGit/OctoPrint-FilamentManager/releases/latest/download/master.zip"
+                pip="https://github.com/billygr/OctoPrint-FilamentManager/archive/refs/heads/master.zip"
             )
         )
 
 
 __plugin_name__ = "Filament Manager"
-__plugin_pythoncompat__ = ">=2.7,<4"
+__plugin_pythoncompat__ = ">=3.9,<4"
 __required_octoprint_version__ = ">=1.3.6"
 
 
