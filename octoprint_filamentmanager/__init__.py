@@ -448,13 +448,13 @@ class FilamentManagerPlugin(FilamentManagerApi,
 
                 # version check: github repository
                 type="github_release",
-                user="billygr",
+                user="OllisGit",
                 repo="OctoPrint-FilamentManager",
                 current=self._plugin_version,
 
                 # update method: pip
                 #pip="https://github.com/malnvenshorn/OctoPrint-FilamentManager/archive/{target_version}.zip"
-                pip="https://github.com/billygr/OctoPrint-FilamentManager/archive/refs/heads/master.zip"
+                pip="https://github.com/OllisGit/OctoPrint-FilamentManager/releases/latest/download/master.zip"
             )
         )
 
